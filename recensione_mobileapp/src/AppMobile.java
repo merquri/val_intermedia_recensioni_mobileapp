@@ -22,10 +22,10 @@ public class AppMobile {
     public void download() {
         // incrementa il ricavoTotale del valore del prezzo (un singolo download)
         ricavoTotale = ricavoTotale + prezzo;
-        System.out.println("L'app è stata scaricata. È costata " + prezzo + " , per un ricavo totale di " + ricavoTotale + ".");
+        System.out.println("L'app è stata scaricata. È costata " + prezzo + ", per un ricavo totale di " + ricavoTotale + ".");
     }
 
-    public void download(int numeroDownload) {
+    public void downloadMultiplo(int numeroDownload) {
         // incrementa il ricavoTotale del valore del prezzo*numeroDownload (download
         // multipli)
         ricavoTotale = ricavoTotale + (prezzo * numeroDownload);
@@ -75,6 +75,17 @@ public class AppMobile {
         float media = sommaStelle / (float) elencoRecensioni.size();
         System.out.println("La media delle recensioni è: "+ String.format("%.2f", media));
         return media;
+    }
+
+    public void stampaRecensioni() {
+        //controllo se l'elenco è vuoto
+        if(elencoRecensioni.isEmpty()) {
+            System.out.println("L'elenco delle recensioni è vuoto.");
+        }
+
+        for (Recensione recensione : elencoRecensioni) {
+            System.out.println(recensione.toString());
+        }
     }
 
     // getters e setters

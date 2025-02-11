@@ -58,4 +58,11 @@ public class Recensione {
         this.testo = testo;
     }
 
+    @Override
+    public String toString() {
+        return "Recensione [data=" + data + ", nomeUtente=" + nomeUtente + ", numeroStelle=" + numeroStelle + ", testo="
+                + testo + "]";
+    }
+
+
 }
