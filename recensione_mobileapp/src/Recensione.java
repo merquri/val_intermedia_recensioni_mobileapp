@@ -17,6 +17,8 @@ public class Recensione {
         this.testo = testo;
     }
 
+    //getters e setters
+
     public LocalDate getData() {
         return data;
     }
@@ -45,6 +47,7 @@ public class Recensione {
         } else {
             this.numeroStelle = numeroStelle;
         }
+
     }
 
     public String getTesto() {
